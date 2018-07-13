@@ -8,15 +8,11 @@ import { ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('selector1') selector1: SelectornumericoComponent;
-  @ViewChild('selector2') selector2: SelectornumericoComponent;  
-
-  fijarSelector1(valor:number) {
-    this.selector1.fijar(valor);
-  }
-
-  fijarSelector2(valor:number) {
-    this.selector2.fijar(valor);
-  }
+  articulos = [{codigo:1, descripcion:'papas', precio:10.55},
+               {codigo:2, descripcion:'manzanas', precio:12.10},
+               {codigo:3, descripcion:'melon', precio:52.30},
+               {codigo:4, descripcion:'cebollas', precio:17},
+               {codigo:5, descripcion:'calabaza', precio:20},
+              ];
 
 }

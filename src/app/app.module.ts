@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
 import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
+import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DadoComponent,
     CronometroComponent,
-    SelectornumericoComponent
+    SelectornumericoComponent,
+    ListadoarticulosComponent
   ],
   imports: [
     BrowserModule
