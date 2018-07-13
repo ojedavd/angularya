@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticulosService } from './articulos.service';
+import  { ArticulosService } from './articulos.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,13 @@ import { ArticulosService } from './articulos.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  articulos = null;
-  
-  constructor(private articulosServicio: ArticulosService) {
-  }
-  
-  ngOnInit() {
-    this.articulos=this.articulosServicio.retornar();
-  }
 
+  private articulos = null;
+
+  constructor(private articulosService: ArticulosService) {}
+
+  ngOnInit() {
+    this.articulosService.retornar()
+      .subscribe( result =>  this.articulos = result)
+  }
 }
