@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DadoComponent } from './dado/dado.component';
+import { CronometroComponent } from './cronometro/cronometro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DadoComponent
+    DadoComponent,
+    CronometroComponent
   ],
   imports: [
     BrowserModule
