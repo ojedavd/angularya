@@ -1,7 +1,7 @@
-<div style="text-align:center">
-  <a routerLink="/juegodados">Juego de dados</a> - 
-  <a routerLink="/acercade">Acerca de ...</a>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-</div>
+<table border="1">
+  <tr *ngFor="let articulo of articulos">
+    <td>{{articulo.codigo}}</td>
+    <td>{{articulo.descripcion}}</td>
+    <td>{{articulo.precio}}</td>
+  </tr>
+</table>
