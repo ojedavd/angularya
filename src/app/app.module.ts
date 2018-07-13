@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DadoComponent } from './dado/dado.component';
@@ -16,7 +17,8 @@ import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.c
     ListadoarticulosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SelectornumericoComponent} from './selectornumerico/selectornumerico.component'
-import { ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,19 @@ import { ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  articulos = [{codigo:1, descripcion:'papas', precio:10.55},
-               {codigo:2, descripcion:'manzanas', precio:12.10},
-               {codigo:3, descripcion:'melon', precio:52.30},
-               {codigo:4, descripcion:'cebollas', precio:17},
-               {codigo:5, descripcion:'calabaza', precio:20},
-              ];
+  private personas = null;
 
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get("http://localhost/SampleWS/peoples")
+      .subscribe(
+        result => {
+          this.personas = result;
+        },
+        error => {
+          console.log('problemas');
+        }
+      );
+  }
 }
