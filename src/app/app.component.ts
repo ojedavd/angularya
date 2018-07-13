@@ -10,17 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   private personas = null;
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit() {
-    this.http.get("http://localhost/SampleWS/peoples")
-      .subscribe(
-        result => {
-          this.personas = result;
-        },
-        error => {
-          console.log('problemas');
-        }
-      );
+
   }
 }

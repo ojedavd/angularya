@@ -1,12 +1,7 @@
-<div *ngIf="personas!=null; else espera">
-    <table border="1">
-      <tr>
-        <td>Codigo</td><td>Nombre</td>
-      </tr>
-      <tr *ngFor="let p of personas">
-        <td>{{p.id}}</td>
-        <td>{{p.name}}</td>
-      </tr>
-    </table>
+<div style="text-align:center">
+  <a routerLink="/juegodados">Juego de dados</a> - 
+  <a routerLink="/acercade">Acerca de ...</a>
+  <div>
+    <router-outlet></router-outlet>
   </div>
-  <ng-template #espera>Esperando datos...</ng-template>
+</div>

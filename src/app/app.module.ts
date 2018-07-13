@@ -1,24 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { JuegodadosComponent } from './juegodados/juegodados.component';
 import { DadoComponent } from './dado/dado.component';
-import { CronometroComponent } from './cronometro/cronometro.component';
-import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
-import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.component';
+import { AcercadeComponent } from './acercade/acercade.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    JuegodadosComponent,
     DadoComponent,
-    CronometroComponent,
-    SelectornumericoComponent,
-    ListadoarticulosComponent
+    AcercadeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
